@@ -78,6 +78,14 @@
       "source": "./test-accounts",
       "description": "Picks a test account for logging into the app under test and reads its emailed or authenticator code; it never shows a password.",
       "version": "0.1.0"
+    },
+    {
+      "defaultEnabled": false,
+      "name": "worktree",
+      "displayName": "Code workspace per task (git worktree)",
+      "source": "./worktree",
+      "description": "Gives each dev task its own copy of the code on its own branch, then commits and pushes; it never merges.",
+      "version": "0.2.0"
     }
   ]
 }

@@ -1,0 +1,43 @@
+{
+  "name": "worktree",
+  "displayName": "Code workspace per task (git worktree)",
+  "version": "0.2.0",
+  "description": "Gives each dev task its own copy of the code on its own branch, then commits and pushes; it never merges.",
+  "author": {
+    "name": "PM Bridge"
+  },
+  "userConfig": {
+    "repo_path": {
+      "type": "directory",
+      "title": "Repository path (absolute)",
+      "description": "Absolute path of the git repository the team works on",
+      "required": true
+    },
+    "worktrees_dir": {
+      "type": "string",
+      "title": "Worktrees folder (absolute; default <repoPath>/.pmb-worktrees)",
+      "description": "Absolute folder for task worktrees; default <repoPath>/.pmb-worktrees"
+    },
+    "remote": {
+      "type": "string",
+      "title": "Git remote (default origin)",
+      "description": "Git remote to fetch from and push to; default origin"
+    },
+    "english_only_writes": {
+      "type": "boolean",
+      "title": "English-only writes",
+      "description": "When on, commit messages with Chinese/Japanese/Korean characters are rejected (default off)",
+      "default": false
+    }
+  },
+  "metadata": {
+    "pmb": {
+      "i18n": {
+        "zh": {
+          "displayName": "每个任务的独立代码目录",
+          "description": "给每个开发任务一份独立的代码目录和分支，再提交、推送；从不合并。"
+        }
+      }
+    }
+  }
+}
