@@ -1,0 +1,40 @@
+{
+  "name": "youtrack",
+  "displayName": "YouTrack tickets",
+  "version": "0.6.0",
+  "description": "Find, read, comment on, update, assign and create YouTrack tickets, and read knowledge base articles.",
+  "author": {
+    "name": "PM Bridge"
+  },
+  "userConfig": {
+    "base_url": {
+      "type": "string",
+      "title": "Server URL",
+      "description": "e.g. https://youtrack.example.com (no credentials in the URL)",
+      "required": true
+    },
+    "token": {
+      "type": "string",
+      "title": "Permanent token",
+      "description": "YouTrack permanent token, sent as Authorization: Bearer",
+      "required": true,
+      "sensitive": true
+    },
+    "english_only_writes": {
+      "type": "boolean",
+      "title": "English-only writes",
+      "description": "When on, comments, issue text, work items and tags with Chinese/Japanese/Korean characters are rejected (default off)",
+      "default": false
+    }
+  },
+  "metadata": {
+    "pmb": {
+      "i18n": {
+        "zh": {
+          "displayName": "YouTrack 工单",
+          "description": "查找、阅读、评论、更新、指派和新建 YouTrack 工单，也能读知识库文章。"
+        }
+      }
+    }
+  }
+}

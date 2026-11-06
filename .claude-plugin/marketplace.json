@@ -86,6 +86,14 @@
       "source": "./worktree",
       "description": "Gives each dev task its own copy of the code on its own branch, then commits and pushes; it never merges.",
       "version": "0.2.0"
+    },
+    {
+      "defaultEnabled": false,
+      "name": "youtrack",
+      "displayName": "YouTrack tickets",
+      "source": "./youtrack",
+      "description": "Find, read, comment on, update, assign and create YouTrack tickets, and read knowledge base articles.",
+      "version": "0.6.0"
     }
   ]
 }
