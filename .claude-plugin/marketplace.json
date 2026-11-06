@@ -14,6 +14,14 @@
       "source": "./creator",
       "description": "Creates new plugins and skills in the standard format by chat, and checks them.",
       "version": "0.1.0"
+    },
+    {
+      "defaultEnabled": false,
+      "name": "dev-loop",
+      "displayName": "Dev ticket workflow (skills)",
+      "source": "./dev-loop",
+      "description": "Step-by-step instructions for taking a dev ticket to a merge request and closing it only after the merge; it runs no program.",
+      "version": "0.1.0"
     }
   ]
 }

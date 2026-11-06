@@ -1,0 +1,19 @@
+{
+  "name": "dev-loop",
+  "displayName": "Dev ticket workflow (skills)",
+  "version": "0.1.0",
+  "description": "Step-by-step instructions for taking a dev ticket to a merge request and closing it only after the merge; it runs no program.",
+  "author": {
+    "name": "PM Bridge"
+  },
+  "metadata": {
+    "pmb": {
+      "i18n": {
+        "zh": {
+          "displayName": "开发工单流程（技能）",
+          "description": "一步步指导把开发工单做成合并请求、合并之后才关单；不运行任何程序。"
+        }
+      }
+    }
+  }
+}
