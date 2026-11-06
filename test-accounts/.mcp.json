@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "test-accounts": {
+      "command": "node",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/dist/server.js"],
+      "env": {
+        "TEST_ACCOUNTS": "${user_config.accounts}",
+        "OTP_SENDERS": "${user_config.otp_senders}",
+        "OTP_SUBJECT_HINT": "${user_config.otp_subject_hint}",
+        "OTP_KEYWORDS": "${user_config.otp_keywords}",
+        "OTP_CODE_PATTERN": "${user_config.otp_code_pattern}"
+      }
+    }
+  }
+}

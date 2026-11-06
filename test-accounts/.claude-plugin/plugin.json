@@ -1,0 +1,53 @@
+{
+  "name": "test-accounts",
+  "displayName": "Test accounts and login codes",
+  "version": "0.1.0",
+  "description": "Picks a test account for logging into the app under test and reads its emailed or authenticator code; it never shows a password.",
+  "author": {
+    "name": "PM Bridge"
+  },
+  "userConfig": {
+    "accounts": {
+      "type": "string",
+      "title": "Test accounts",
+      "description": "The account book to sign in with; delivered as a JSON array of accounts",
+      "required": true,
+      "sensitive": true
+    },
+    "otp_senders": {
+      "type": "string",
+      "title": "Verification mail senders (comma-separated addresses or @domain)",
+      "description": "Only mail from these senders is read; empty means mail is never read"
+    },
+    "otp_subject_hint": {
+      "type": "string",
+      "title": "Verification mail subject contains (optional)",
+      "description": "Only mail whose subject contains this counts"
+    },
+    "otp_keywords": {
+      "type": "string",
+      "title": "Words next to the code (comma-separated; default: authentication token code, email verification code)",
+      "description": "Phrases the code sits next to in the mail"
+    },
+    "otp_code_pattern": {
+      "type": "string",
+      "title": "Code pattern (regular expression; default six digits)",
+      "description": "Regular expression that matches one code"
+    }
+  },
+  "metadata": {
+    "pmb": {
+      "variables": {
+        "accounts": {
+          "kind": "accountBook"
+        }
+      },
+      "i18n": {
+        "zh": {
+          "displayName": "测试账号与登录验证码",
+          "description": "挑一个测试账号登录被测应用，读邮件里的验证码或算出动态验证码；从不显示密码。"
+        }
+      }
+    }
+  }
+}

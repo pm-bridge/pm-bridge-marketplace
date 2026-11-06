@@ -70,6 +70,14 @@
       "source": "./outlook",
       "description": "Reads your Outlook mail and cannot send, move or delete anything; you connect it with one button and a code in your browser.",
       "version": "0.1.0"
+    },
+    {
+      "defaultEnabled": false,
+      "name": "test-accounts",
+      "displayName": "Test accounts and login codes",
+      "source": "./test-accounts",
+      "description": "Picks a test account for logging into the app under test and reads its emailed or authenticator code; it never shows a password.",
+      "version": "0.1.0"
     }
   ]
 }
