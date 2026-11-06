@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "knowledge": {
+      "command": "node",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/dist/server.js"],
+      "env": {
+        "KNOWLEDGE_INDEX_DIR": "${CLAUDE_PLUGIN_DATA}/index",
+        "OLLAMA_URL": "${user_config.ollama_url}",
+        "KNOWLEDGE_EMBED_MODEL": "${user_config.embed_model}",
+        "KNOWLEDGE_FOLDERS": "${user_config.folders}",
+        "KNOWLEDGE_EXTENSIONS": "${user_config.extensions}",
+        "YOUTRACK_BASE_URL": "${user_config.youtrack_base_url}",
+        "YOUTRACK_TOKEN": "${user_config.youtrack_token}"
+      }
+    }
+  }
+}

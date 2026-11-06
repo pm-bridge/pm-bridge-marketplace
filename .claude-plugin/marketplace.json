@@ -38,6 +38,14 @@
       "source": "./gitlab",
       "description": "Work with GitLab projects, branches, merge requests and pipelines; it can never merge.",
       "version": "0.4.0"
+    },
+    {
+      "defaultEnabled": false,
+      "name": "knowledge",
+      "displayName": "Knowledge base search",
+      "source": "./knowledge",
+      "description": "Searches YouTrack articles and your local folders together as one knowledge base.",
+      "version": "0.1.0"
     }
   ]
 }

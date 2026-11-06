@@ -1,0 +1,52 @@
+{
+  "name": "knowledge",
+  "displayName": "Knowledge base search",
+  "version": "0.1.0",
+  "description": "Searches YouTrack articles and your local folders together as one knowledge base.",
+  "author": {
+    "name": "PM Bridge"
+  },
+  "userConfig": {
+    "ollama_url": {
+      "type": "string",
+      "title": "Ollama URL (default http://127.0.0.1:11434)",
+      "description": "Ollama server used for embeddings; http or https, no credentials"
+    },
+    "embed_model": {
+      "type": "string",
+      "title": "Embedding model (default bge-m3)",
+      "description": "Ollama embedding model name; it must be pulled in Ollama"
+    },
+    "folders": {
+      "type": "string",
+      "title": "Local folders to index (absolute paths, comma or newline separated)",
+      "description": "Only these folders are scanned; relative paths are refused"
+    },
+    "extensions": {
+      "type": "string",
+      "title": "File extensions to index in folders (comma separated, e.g. md,txt; default: common text and code files)",
+      "description": "Replaces the default list of text and code extensions"
+    },
+    "youtrack_base_url": {
+      "type": "string",
+      "title": "YouTrack server URL (for articles)",
+      "description": "e.g. https://youtrack.example.com (no credentials in the URL); needs YOUTRACK_TOKEN too"
+    },
+    "youtrack_token": {
+      "type": "string",
+      "title": "YouTrack permanent token",
+      "description": "Sent only to YOUTRACK_BASE_URL as Authorization: Bearer",
+      "sensitive": true
+    }
+  },
+  "metadata": {
+    "pmb": {
+      "i18n": {
+        "zh": {
+          "displayName": "知识库搜索",
+          "description": "把 YouTrack 文章和本机文件夹合成一个知识库来搜索。"
+        }
+      }
+    }
+  }
+}
