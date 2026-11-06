@@ -54,6 +54,14 @@
       "source": "./mac-mail",
       "description": "Reads the mail already on this Mac in Apple Mail (and in Legacy Outlook) and can never send, move, delete or mark anything.",
       "version": "0.1.0"
+    },
+    {
+      "defaultEnabled": false,
+      "name": "maestro",
+      "displayName": "Phone and emulator testing (Maestro)",
+      "source": "./maestro",
+      "description": "Tests the Android app on a phone or emulator with Maestro and reports the result with screenshots from that run.",
+      "version": "0.1.0"
     }
   ]
 }

@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "maestro": {
+      "command": "node",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/dist/server.js"],
+      "env": {
+        "MAESTRO_ALLOWED_ROOTS": "${user_config.allowed_roots}",
+        "ANDROID_SDK": "${user_config.android_sdk}",
+        "MAESTRO_PATH": "${user_config.maestro_path}",
+        "JAVA_HOME_OVERRIDE": "${user_config.java_home}",
+        "MAESTRO_FLOW_TIMEOUT_SEC": "${user_config.flow_timeout_sec}",
+        "MAESTRO_BUILD_TIMEOUT_SEC": "${user_config.build_timeout_sec}",
+        "TEST_ACCOUNTS": "${user_config.accounts}"
+      },
+      "timeout": 1800000
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "name": "maestro",
+  "displayName": "Phone and emulator testing (Maestro)",
+  "version": "0.1.0",
+  "description": "Tests the Android app on a phone or emulator with Maestro and reports the result with screenshots from that run.",
+  "author": {
+    "name": "PM Bridge"
+  },
+  "userConfig": {
+    "allowed_roots": {
+      "type": "string",
+      "title": "Allowed project roots (absolute paths, comma or newline separated)",
+      "description": "Folders that projectDir and flowPath must be inside; with none, every project path is refused"
+    },
+    "android_sdk": {
+      "type": "directory",
+      "title": "Android SDK folder (default ~/Library/Android/sdk)",
+      "description": "adb and emulator are taken from here; default $ANDROID_HOME, $ANDROID_SDK_ROOT, else ~/Library/Android/sdk"
+    },
+    "maestro_path": {
+      "type": "file",
+      "title": "maestro executable (default ~/.maestro/bin/maestro)",
+      "description": "Absolute path of the maestro CLI"
+    },
+    "java_home": {
+      "type": "directory",
+      "title": "JAVA_HOME for Gradle and Maestro (default: $JAVA_HOME, else Android Studio's bundled JBR)",
+      "description": "Absolute JDK folder; overrides $JAVA_HOME for the child tools"
+    },
+    "flow_timeout_sec": {
+      "type": "number",
+      "title": "Flow run timeout in seconds (default 300)",
+      "description": "Whole seconds, 10 to 7200; raising it does not raise the run_flow call timeout below",
+      "min": 10,
+      "max": 7200
+    },
+    "build_timeout_sec": {
+      "type": "number",
+      "title": "Build timeout in seconds (default 1200)",
+      "description": "Whole seconds, 10 to 7200; raising it does not raise the build_and_install call timeout below",
+      "min": 10,
+      "max": 7200
+    },
+    "accounts": {
+      "type": "string",
+      "title": "Test accounts",
+      "description": "Account book for login flows; choose the same book as for test-accounts",
+      "sensitive": true
+    }
+  },
+  "metadata": {
+    "pmb": {
+      "variables": {
+        "accounts": {
+          "kind": "accountBook"
+        }
+      },
+      "timeouts": {
+        "list_devices": 90,
+        "start_emulator": 120,
+        "run_flow": 360,
+        "build_and_install": 1800
+      },
+      "i18n": {
+        "zh": {
+          "displayName": "手机与模拟器测试（Maestro）",
+          "description": "用 Maestro 在手机或模拟器上测试安卓应用，给出结果和这次运行的截图。"
+        }
+      }
+    }
+  }
+}
