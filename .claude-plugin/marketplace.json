@@ -46,6 +46,14 @@
       "source": "./knowledge",
       "description": "Searches YouTrack articles and your local folders together as one knowledge base.",
       "version": "0.1.0"
+    },
+    {
+      "defaultEnabled": false,
+      "name": "mac-mail",
+      "displayName": "Mac mail (read-only)",
+      "source": "./mac-mail",
+      "description": "Reads the mail already on this Mac in Apple Mail (and in Legacy Outlook) and can never send, move, delete or mark anything.",
+      "version": "0.1.0"
     }
   ]
 }

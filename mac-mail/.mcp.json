@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "mac-mail": {
+      "command": "node",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/dist/server.js"],
+      "timeout": 90000
+    }
+  }
+}

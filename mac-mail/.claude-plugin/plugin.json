@@ -1,0 +1,23 @@
+{
+  "name": "mac-mail",
+  "displayName": "Mac mail (read-only)",
+  "version": "0.1.0",
+  "description": "Reads the mail already on this Mac in Apple Mail (and in Legacy Outlook) and can never send, move, delete or mark anything.",
+  "author": {
+    "name": "PM Bridge"
+  },
+  "metadata": {
+    "pmb": {
+      "timeouts": {
+        "list_messages": 90,
+        "search_messages": 90
+      },
+      "i18n": {
+        "zh": {
+          "displayName": "本机邮件（只读）",
+          "description": "读这台 Mac 上「邮件」App（以及旧版 Outlook）里已有的邮件，永远不会发送、移动、删除或标记任何邮件。"
+        }
+      }
+    }
+  }
+}
