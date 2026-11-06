@@ -1,0 +1,43 @@
+{
+  "name": "feishu",
+  "displayName": "Feishu (Lark) IM bridge",
+  "version": "0.2.0",
+  "description": "Brings Feishu groups and chats into PM Bridge groups: their messages come in, and you can send to them from the app, images and files too.",
+  "author": {
+    "name": "PM Bridge"
+  },
+  "userConfig": {
+    "app_id": {
+      "type": "string",
+      "title": "App ID",
+      "description": "The App ID of your Feishu custom app (Feishu Open Platform → your app → Credentials)",
+      "required": true
+    },
+    "app_secret": {
+      "type": "string",
+      "title": "App Secret",
+      "description": "The App Secret of the same app",
+      "required": true,
+      "sensitive": true
+    },
+    "domain": {
+      "type": "string",
+      "title": "Domain",
+      "description": "feishu (open.feishu.cn, default) or lark (open.larksuite.com)",
+      "default": "feishu"
+    }
+  },
+  "metadata": {
+    "pmb": {
+      "bridge": {
+        "protocol": "pmb-bridge/1"
+      },
+      "i18n": {
+        "zh": {
+          "displayName": "飞书 IM 桥接",
+          "description": "把飞书的群和单聊接入 PM Bridge 的群：消息进来，你也可以从应用里发过去。"
+        }
+      }
+    }
+  }
+}

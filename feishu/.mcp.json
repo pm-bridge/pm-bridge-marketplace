@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "feishu": {
+      "command": "node",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/dist/server.js"],
+      "env": {
+        "FEISHU_APP_ID": "${user_config.app_id}",
+        "FEISHU_APP_SECRET": "${user_config.app_secret}",
+        "FEISHU_DOMAIN": "${user_config.domain}"
+      }
+    }
+  }
+}

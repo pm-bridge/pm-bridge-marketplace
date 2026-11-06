@@ -22,6 +22,14 @@
       "source": "./dev-loop",
       "description": "Step-by-step instructions for taking a dev ticket to a merge request and closing it only after the merge; it runs no program.",
       "version": "0.1.0"
+    },
+    {
+      "defaultEnabled": false,
+      "name": "feishu",
+      "displayName": "Feishu (Lark) IM bridge",
+      "source": "./feishu",
+      "description": "Brings Feishu groups and chats into PM Bridge groups: their messages come in, and you can send to them from the app, images and files too.",
+      "version": "0.2.0"
     }
   ]
 }
