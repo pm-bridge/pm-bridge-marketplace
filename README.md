@@ -1,25 +1,27 @@
-# PM Bridge 插件市场
+# PM Bridge plugin marketplace
 
-PM Bridge 的官方插件，每个插件单独发布、单独更新。这里只有构建好的插件，源码不在这里。
+English | [中文](README.zh-CN.md)
 
-## 怎么安装
+The official PM Bridge plugins, each released and updated on its own. Only the built plugins are here, not their sources.
 
-PM Bridge 已经预置了这个市场：打开 **设置 → 集成 → 市场**，找到要用的插件点 **安装**，确认后在 **工具与技能** 里启用。
+## How to install
 
-也可以在任何支持 Claude Code 插件市场的地方添加 `https://github.com/tianxia--/pm-bridge-marketplace`。
+PM Bridge has this marketplace already: open **Settings → Integrations → Marketplace**, find the plugin you want and press **Install**; once you confirm, enable it under **Tools & skills**.
 
-## 插件
+Any app that supports Claude Code plugin marketplaces can also add `https://github.com/tianxia--/pm-bridge-marketplace`.
 
-| 插件 | 名称 | 版本 | 说明 |
+## Plugins
+
+| Plugin | Name | Version | What it does |
 |---|---|---|---|
-| 插件与技能生成器 | `creator` | 0.1.0 | 在聊天里按标准格式新建插件和技能，并检查它们。 |
-| 开发工单流程（技能） | `dev-loop` | 0.1.0 | 一步步指导把开发工单做成合并请求、合并之后才关单；不运行任何程序。 |
-| 飞书 IM 桥接 | `feishu` | 0.2.0 | 把飞书的群和单聊接入 PM Bridge 的群：消息进来，你也可以从应用里发过去。 |
-| GitLab 合并请求 | `gitlab` | 0.4.0 | 处理 GitLab 项目、分支、合并请求和流水线；它永远不会合并。 |
-| 知识库搜索 | `knowledge` | 0.1.0 | 把 YouTrack 文章和本机文件夹合成一个知识库来搜索。 |
-| 本机邮件（只读） | `mac-mail` | 0.1.0 | 读这台 Mac 上「邮件」App（以及旧版 Outlook）里已有的邮件，永远不会发送、移动、删除或标记任何邮件。 |
-| 手机与模拟器测试（Maestro） | `maestro` | 0.1.0 | 用 Maestro 在手机或模拟器上测试安卓应用，给出结果和这次运行的截图。 |
-| Outlook 邮件（只读） | `outlook` | 0.1.0 | 读你的 Outlook 邮件，不能发送、移动或删除；用一个按钮加浏览器里的验证码连接。 |
-| 测试账号与登录验证码 | `test-accounts` | 0.1.0 | 挑一个测试账号登录被测应用，读邮件里的验证码或算出动态验证码；从不显示密码。 |
-| 每个任务的独立代码目录 | `worktree` | 0.2.0 | 给每个开发任务一份独立的代码目录和分支，再提交、推送；从不合并。 |
-| YouTrack 工单 | `youtrack` | 0.6.0 | 查找、阅读、评论、更新、指派和新建 YouTrack 工单，也能读知识库文章。 |
+| Plugin and skill creator | `creator` | 0.1.0 | Creates new plugins and skills in the standard format by chat, and checks them. |
+| Dev ticket workflow (skills) | `dev-loop` | 0.1.0 | Step-by-step instructions for taking a dev ticket to a merge request and closing it only after the merge; it runs no program. |
+| Feishu (Lark) IM bridge | `feishu` | 0.2.0 | Brings Feishu groups and chats into PM Bridge groups: their messages come in, and you can send to them from the app, images and files too. |
+| GitLab merge requests | `gitlab` | 0.4.0 | Work with GitLab projects, branches, merge requests and pipelines; it can never merge. |
+| Knowledge base search | `knowledge` | 0.1.0 | Searches YouTrack articles and your local folders together as one knowledge base. |
+| Mac mail (read-only) | `mac-mail` | 0.1.0 | Reads the mail already on this Mac in Apple Mail (and in Legacy Outlook) and can never send, move, delete or mark anything. |
+| Phone and emulator testing (Maestro) | `maestro` | 0.1.0 | Tests the Android app on a phone or emulator with Maestro and reports the result with screenshots from that run. |
+| Outlook mail (read-only) | `outlook` | 0.1.0 | Reads your Outlook mail and cannot send, move or delete anything; you connect it with one button and a code in your browser. |
+| Test accounts and login codes | `test-accounts` | 0.1.0 | Picks a test account for logging into the app under test and reads its emailed or authenticator code; it never shows a password. |
+| Code workspace per task (git worktree) | `worktree` | 0.2.0 | Gives each dev task its own copy of the code on its own branch, then commits and pushes; it never merges. |
+| YouTrack tickets | `youtrack` | 0.6.0 | Find, read, comment on, update, assign and create YouTrack tickets, and read knowledge base articles. |
