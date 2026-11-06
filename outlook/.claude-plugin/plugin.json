@@ -1,0 +1,33 @@
+{
+  "name": "outlook",
+  "displayName": "Outlook mail (read-only)",
+  "version": "0.1.0",
+  "description": "Reads your Outlook mail and cannot send, move or delete anything; you connect it with one button and a code in your browser.",
+  "author": {
+    "name": "PM Bridge"
+  },
+  "userConfig": {
+    "tenant_id": {
+      "type": "string",
+      "title": "Microsoft Entra tenant ID (optional)",
+      "description": "Your organisation's tenant ID or domain (e.g. contoso.com); common lets any work account sign in",
+      "required": false,
+      "default": "common"
+    }
+  },
+  "metadata": {
+    "pmb": {
+      "signIn": {
+        "login": "login",
+        "status": "verify-login",
+        "logout": "logout"
+      },
+      "i18n": {
+        "zh": {
+          "displayName": "Outlook 邮件（只读）",
+          "description": "读你的 Outlook 邮件，不能发送、移动或删除；用一个按钮加浏览器里的验证码连接。"
+        }
+      }
+    }
+  }
+}

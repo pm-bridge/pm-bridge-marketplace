@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "outlook": {
+      "command": "npx",
+      "args": ["-y", "@softeria/ms-365-mcp-server@0.158.0", "--org-mode", "--preset", "mail", "--read-only"],
+      "env": {
+        "MS365_MCP_TENANT_ID": "${user_config.tenant_id}"
+      }
+    }
+  }
+}

@@ -62,6 +62,14 @@
       "source": "./maestro",
       "description": "Tests the Android app on a phone or emulator with Maestro and reports the result with screenshots from that run.",
       "version": "0.1.0"
+    },
+    {
+      "defaultEnabled": false,
+      "name": "outlook",
+      "displayName": "Outlook mail (read-only)",
+      "source": "./outlook",
+      "description": "Reads your Outlook mail and cannot send, move or delete anything; you connect it with one button and a code in your browser.",
+      "version": "0.1.0"
     }
   ]
 }
