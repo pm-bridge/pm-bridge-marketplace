@@ -8,7 +8,7 @@ PM Bridge 的官方插件，每个插件单独发布、单独更新。这里只�
 
 PM Bridge 已经预置了这个市场：打开 **设置 → 集成 → 市场**，找到要用的插件点 **安装**，确认后在 **工具与技能** 里启用。
 
-也可以在任何支持 Claude Code 插件市场的地方添加 `https://github.com/tianxia--/pm-bridge-marketplace`。
+也可以在任何支持 Claude Code 插件市场的地方添加 `https://github.com/pm-bridge/pm-bridge-marketplace`。
 
 ## 插件
 

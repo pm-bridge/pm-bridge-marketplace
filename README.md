@@ -8,7 +8,7 @@ The official PM Bridge plugins, each released and updated on its own. Only the b
 
 PM Bridge has this marketplace already: open **Settings → Integrations → Marketplace**, find the plugin you want and press **Install**; once you confirm, enable it under **Tools & skills**.
 
-Any app that supports Claude Code plugin marketplaces can also add `https://github.com/tianxia--/pm-bridge-marketplace`.
+Any app that supports Claude Code plugin marketplaces can also add `https://github.com/pm-bridge/pm-bridge-marketplace`.
 
 ## Plugins
 
