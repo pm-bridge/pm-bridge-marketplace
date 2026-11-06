@@ -6,5 +6,14 @@
   "metadata": {
     "description": "The official PM Bridge plugins, built and ready to install: each is installed from Settings > Integrations > Marketplaces and stays disabled until the owner enables it."
   },
-  "plugins": []
+  "plugins": [
+    {
+      "defaultEnabled": false,
+      "name": "creator",
+      "displayName": "Plugin and skill creator",
+      "source": "./creator",
+      "description": "Creates new plugins and skills in the standard format by chat, and checks them.",
+      "version": "0.1.0"
+    }
+  ]
 }

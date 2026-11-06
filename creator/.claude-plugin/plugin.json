@@ -1,0 +1,27 @@
+{
+  "name": "creator",
+  "displayName": "Plugin and skill creator",
+  "version": "0.1.0",
+  "description": "Creates new plugins and skills in the standard format by chat, and checks them.",
+  "author": {
+    "name": "PM Bridge"
+  },
+  "userConfig": {
+    "plugins_root": {
+      "type": "directory",
+      "title": "Plugins folder (absolute)",
+      "description": "The only folder the creator writes in, normally the pm-bridge-plugins repository on this machine; new plugins are created as its subfolders. Until it is set, the tools answer with an error asking for it",
+      "required": false
+    }
+  },
+  "metadata": {
+    "pmb": {
+      "i18n": {
+        "zh": {
+          "displayName": "插件与技能生成器",
+          "description": "在聊天里按标准格式新建插件和技能，并检查它们。"
+        }
+      }
+    }
+  }
+}
