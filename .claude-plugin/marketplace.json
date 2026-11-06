@@ -1,0 +1,10 @@
+{
+  "name": "pm-bridge-plugins",
+  "owner": {
+    "name": "PM Bridge"
+  },
+  "metadata": {
+    "description": "The official PM Bridge plugins, built and ready to install: each is installed from Settings > Integrations > Marketplaces and stays disabled until the owner enables it."
+  },
+  "plugins": []
+}
