@@ -1,0 +1,19 @@
+{
+  "name": "quick-tools",
+  "displayName": "One-off jobs (skills)",
+  "version": "0.1.0",
+  "description": "How a persona does a one-off job you need now - sign or edit a PDF, convert documents and images, pull out a table - with a throwaway script on this Mac; it runs no program itself.",
+  "author": {
+    "name": "PM Bridge"
+  },
+  "metadata": {
+    "pmb": {
+      "i18n": {
+        "zh": {
+          "displayName": "临时工具箱（技能）",
+          "description": "教人物用一次性的小脚本在本机马上办好临时的事：给 PDF 加签名或编辑、转换文档和图片、提取表格；插件本身不运行任何程序。"
+        }
+      }
+    }
+  }
+}

@@ -22,6 +22,7 @@ Any app that supports Claude Code plugin marketplaces can also add `https://gith
 | Mac mail (read-only) | `mac-mail` | 0.1.0 | Reads the mail already on this Mac in Apple Mail (and in Legacy Outlook) and can never send, move, delete or mark anything. |
 | Phone and emulator testing (Maestro) | `maestro` | 0.1.0 | Tests the Android app on a phone or emulator with Maestro and reports the result with screenshots from that run. |
 | Outlook mail (read-only) | `outlook` | 0.1.0 | Reads your Outlook mail and cannot send, move or delete anything; you connect it with one button and a code in your browser. |
+| One-off jobs (skills) | `quick-tools` | 0.1.0 | How a persona does a one-off job you need now - sign or edit a PDF, convert documents and images, pull out a table - with a throwaway script on this Mac; it runs no program itself. |
 | Test accounts and login codes | `test-accounts` | 0.1.0 | Picks a test account for logging into the app under test and reads its emailed or authenticator code; it never shows a password. |
 | Code workspace per task (git worktree) | `worktree` | 0.2.0 | Gives each dev task its own copy of the code on its own branch, then commits and pushes; it never merges. |
 | YouTrack tickets | `youtrack` | 0.6.0 | Find, read, comment on, update, assign and create YouTrack tickets, and read knowledge base articles. |

@@ -73,6 +73,14 @@
     },
     {
       "defaultEnabled": false,
+      "name": "quick-tools",
+      "displayName": "One-off jobs (skills)",
+      "source": "./quick-tools",
+      "description": "How a persona does a one-off job you need now - sign or edit a PDF, convert documents and images, pull out a table - with a throwaway script on this Mac; it runs no program itself.",
+      "version": "0.1.0"
+    },
+    {
+      "defaultEnabled": false,
       "name": "test-accounts",
       "displayName": "Test accounts and login codes",
       "source": "./test-accounts",
