@@ -72,7 +72,6 @@ margin.
 |---|---|---|
 | `build_and_install` | 1800 | Gradle 1200 + ABI 8 + 2 x lastUpdateTime 10 + `adb install` 300 + warm-up (monkey 30 + up to ~100 wait + 3 + force-stop 15) = ~1676 |
 | `run_flow` | 360 | `maestro test` 300 + foreground check 8 = ~308 |
-| `start_emulator` | 120 | `-list-avds` 15 + `adb devices` 15 + 5 per running emulator + boot wait 45 (one poll can overrun by ~25) = ~100 plus 5 per emulator |
 | `list_devices` | 90 | `adb devices` 15 + `-list-avds` 15 + `simctl` 20 + 5 per running emulator = 50 plus 5 per emulator |
 
 `screenshot` (20 s) and `ui_tree` (50 s) stay under the default. `.mcp.json` also sets the official
@@ -86,7 +85,6 @@ raised here.
 | tool | read/write | what it does |
 |---|---|---|
 | `list_devices` | read | Android devices / emulators (booted, offline) and bootable AVDs; iOS simulators on macOS |
-| `start_emulator` | write | `avd`: boot it detached and wait up to ~45 s for `sys.boot_completed`; returns `booted` or `booting` |
 | `build_and_install` | write | `projectDir`, `variant?`, `appId?`, `device?`: `gradlew assemble<Variant>`, choose the APK, `adb install -r -g`, prove the replace, warm up |
 | `run_flow` | write | `flowYaml` or `flowPath`, `device?`, `env?`, `accountId?`: run `maestro test`; verdict, phase, failing step, assertion, distilled output, screenshots from this run as images |
 | `screenshot` | read | `device?`: the current screen as one PNG image |

@@ -1,8 +1,8 @@
 {
   "name": "maestro",
   "displayName": "Phone and emulator testing (Maestro)",
-  "version": "0.1.0",
-  "description": "Tests the Android app on a phone or emulator with Maestro and reports the result with screenshots from that run.",
+  "version": "0.2.0",
+  "description": "Tests the Android or iOS app on a phone, emulator or simulator with Maestro and reports the result with screenshots from that run.",
   "author": {
     "name": "PM Bridge"
   },
@@ -57,14 +57,13 @@
       },
       "timeouts": {
         "list_devices": 90,
-        "start_emulator": 120,
         "run_flow": 360,
         "build_and_install": 1800
       },
       "i18n": {
         "zh": {
           "displayName": "手机与模拟器测试（Maestro）",
-          "description": "用 Maestro 在手机或模拟器上测试安卓应用，给出结果和这次运行的截图。"
+          "description": "用 Maestro 在手机或模拟器上测试安卓和 iOS 应用，给出结果和这次运行的截图。"
         }
       }
     }

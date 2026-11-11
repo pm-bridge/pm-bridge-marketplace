@@ -1,8 +1,8 @@
 ---
 name: device-verify
-description: How to verify a change on a real Android device with Maestro - arrange by any deterministic means, decide only by an assertion on the real UI in this run, keep evidence from this run only, know the measured traps, and report steps, verdict and screenshots.
+description: How to verify a change on an Android device or emulator, or an iOS simulator, with Maestro - arrange by any deterministic means, decide only by an assertion on the real UI in this run, keep evidence from this run only, know the measured traps, and report steps, verdict and screenshots.
 metadata:
-  tools: list_devices start_emulator build_and_install run_flow screenshot ui_tree
+  tools: list_devices build_and_install run_flow screenshot ui_tree
 ---
 
 # Verify a change on a device
@@ -28,10 +28,15 @@ Three invariants; everything else is open:
 
 ## Steps
 
-1. **Device.** `list_devices`. Reuse a booted device. Otherwise `start_emulator(avd)`; it returns
-   `booting` when the boot takes longer than its wait: call `list_devices` again until it is booted.
-   If a layout depends on the form factor (phone vs tablet), pick the matching device.
-2. **This build.** `build_and_install(projectDir = the task workspace, variant, appId, device)`.
+1. **Device.** Get it from PM Bridge, never start or stop one yourself: `start_device` (PM Bridge's
+   tool) gives a running, booted device and its serial — an Android emulator's `emulator-5554`, an
+   iOS simulator's UDID — and the app opens it with its window when it is not running (the owner is
+   asked the first time). Devices are shared: never `emulator -avd`, `simctl boot`/`shutdown` or
+   `adb emu kill`. If a layout depends on the form factor (phone vs tablet), pick the matching device.
+2. **This build.** Android: `build_and_install(projectDir = the task workspace, variant, appId, device)`.
+   iOS: build for the simulator yourself (`xcodebuild -scheme <S> -destination 'platform=iOS
+   Simulator,id=<UDID>' build`; it writes `~/Library/Developer/Xcode/DerivedData`, so it needs the
+   Full access level) and install with `xcrun simctl install <UDID> <the .app>`.
    Without it the flow runs against whatever APK is already on the device (once two weeks older
    than the fix). Name a single variant (e.g. `CloneDebug`): building every flavour can fail on one
    the change never touched. Pass `appId` so the install is proven to replace the package and the
@@ -58,6 +63,18 @@ Three invariants; everything else is open:
    real elements; `screenshot` shows the screen. When an element is not found, grep the source
    for it: the layout XML gives the real id, and whether its parent is a `ScrollView` /
    `RecyclerView` (then it is below the fold: scroll, do not change the assertion).
+
+## Maestro or your own command: whichever is faster and surer
+
+- **The screen goes through Maestro**: tap, type, swipe, wait, check. It finds elements by their
+  text or id, waits for the screen to settle and says which step failed. `adb shell input tap x y`
+  is blind: no wait, no check, coordinates that break on another device.
+- **One flow, many steps.** Each `run_flow` first connects to the driver on the device (a few
+  seconds): write the steps that belong together into one flow and run it once, never one run a step.
+- **One-step things are faster with your own commands**: install (`adb install -r`, `xcrun simctl
+  install`), logs (`adb logcat -d`, `xcrun simctl spawn <UDID> log show`), launching with a deep link
+  (`adb shell am start -d`, `xcrun simctl openurl`), a quick look (`adb exec-out screencap -p`,
+  `xcrun simctl io <UDID> screenshot`). A screenshot that is evidence still comes from `run_flow`.
 
 ## Measured traps (real emulator, each cost a wasted round)
 
